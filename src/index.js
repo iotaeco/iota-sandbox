@@ -1,5 +1,5 @@
-import IOTA from 'iota.lib.js';
-import curl from 'curl.lib.js';
+var IOTA = require('iota.lib.js');
+var curl = require('curl.lib.js');
 
 // Create IOTA instance directly with provider
 var iota = new IOTA({
