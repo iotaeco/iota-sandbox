@@ -1,3 +1,6 @@
+import IOTA from 'iota.lib.js';
+import curl from 'curl.lib.js';
+
 // Create IOTA instance directly with provider
 var iota = new IOTA({
   provider: "https://nodes.iota.fm:443/"
