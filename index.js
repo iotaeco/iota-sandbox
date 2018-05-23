@@ -1,5 +1,5 @@
 var IOTA = require("iota.lib.js");
-var curl = require("curl.lib.js");
+var curl = require("curl.lib.js/dist/curl.min.js");
 
 // Create IOTA instance directly with provider
 var iota = new IOTA({
