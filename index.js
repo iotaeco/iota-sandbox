@@ -6,7 +6,7 @@ var iota = new IOTA({
   provider: "https://nodes.iota.fm:443/"
 });
 
-// What it the IOTA lib version
+// What is the IOTA lib version
 console.log("IOTA Version", iota.version);
 
 // Attach curl to iota instance so that we can perform WebGL proof of work
