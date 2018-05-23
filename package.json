@@ -1,13 +1,13 @@
 {
-  "name": "iota-sandbox",
-  "version": "1.0.0",
-  "description": "Sandbox for experimenting with iota.lib.js",
-  "main": "index.html",
-  "dependencies": {
-    "iota.lib.js": "0.4.7"
-  },
-  "keywords": [
-    "iota",
-    "tangle"
-  ]
+    "name": "iota-sandbox",
+    "version": "1.0.0",
+    "description": "Sandbox for experimenting with iota.lib.js",
+    "main": "src/index.js",
+    "dependencies": {
+        "iota.lib.js": "0.4.7"
+    },
+    "keywords": [
+        "iota",
+        "tangle"
+    ]
 }
