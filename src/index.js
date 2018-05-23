@@ -1,4 +1,5 @@
 var IOTA = require("iota.lib.js");
+var curl = require("curl.lib.js");
 
 // Create IOTA instance directly with provider
 var iota = new IOTA({
@@ -7,6 +8,10 @@ var iota = new IOTA({
 
 // What it the IOTA lib version
 console.log("IOTA Version", iota.version);
+
+// Attach curl to iota instance so that we can perform WebGL proof of work
+curl.init();
+curl.overrideAttachToTangle(iota);
 
 // Call getNodeInfo to get some information about the node
 console.log("Calling getNodeInfo");
