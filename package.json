@@ -4,7 +4,7 @@
     "description": "Sandbox for experimenting with iota.lib.js",
     "main": "index.js",
     "dependencies": {
-        "curl.lib.js": "https://github.com/iotaeco/curl.lib.js.git",
+        "curl.lib.js": "git+https://github.com/iotaeco/curl.lib.js.git",
         "iota.lib.js": "^0.4.7"
     },
     "keywords": [
