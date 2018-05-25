@@ -8,7 +8,7 @@
         "build": "parcel build index.html"
     },
     "dependencies": {
-        "curl.lib.js": "https://github.com/iotaeco/curl.lib.js.git",
+        "curl.lib.js": "iotaeco/curl.lib.js.git",
         "iota.lib.js": "^0.4.7"
     },
     "devDependencies": {
