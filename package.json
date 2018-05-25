@@ -2,7 +2,7 @@
     "name": "iota-sandbox",
     "version": "1.0.0",
     "description": "Sandbox for experimenting with iota.lib.js",
-    "main": "index.js",
+    "main": "index.html",
     "scripts": {
         "start": "parcel index.html --open",
         "build": "parcel build index.html"
