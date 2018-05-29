@@ -10,8 +10,12 @@ var iota = new IOTA({
 console.log("IOTA Version", iota.version);
 
 // Attach curl to iota instance so that we can perform WebGL proof of work
-curl.init();
-curl.overrideAttachToTangle(iota);
+try {
+    curl.init();
+    curl.overrideAttachToTangle(iota);
+} catch (err) {
+    console.error("Error", err);
+}
 
 // Call getNodeInfo to get some information about the node
 console.log("Calling getNodeInfo");
