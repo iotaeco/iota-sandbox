@@ -1,4 +1,64 @@
 html {
-  font-family: Nunito, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Nunito Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Arial, sans-serif;
+}
+
+html, body {
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  flex: 1 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: linear-gradient(90deg,#092a33,#019792);
+  padding: 30px;
+}
+
+article {
+  flex-grow: 1;
+  margin: 50px;
+}
+
+article > h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.output-window {
+  height: 40vh;
+  padding: 20px;
+  overflow: auto;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+}
+
+footer {
+  background-image: linear-gradient(0deg,#3e3e3e,#2e2e2e);
+  color: white;
+  padding: 30px;
+}
+
+footer a,
+footer a:active,
+footer a:visited {
+  color: white;
 }

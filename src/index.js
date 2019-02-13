@@ -1,28 +1,25 @@
-var IOTA = require('iota.lib.js');
-var curl = require('curl.lib.js');
+require('regenerator-runtime/runtime');
+const { logOutput, logError, clearOutput } = require("./output.js");
+const { composeAPI } = require('@iota/core');
 
-// Create IOTA instance directly with provider
-var iota = new IOTA({
-  provider: "https://nodes.iota.fm:443/"
-});
+// The node to connect to
+const provider = "https://nodes.thetangle.org:443";
 
-// What is the IOTA lib version
-console.log("IOTA Version", iota.version);
+(async function () {
+  clearOutput();
 
-// Attach curl to iota instance so that we can perform WebGL proof of work
-try {
-    curl.init();
-    curl.overrideAttachToTangle(iota);
-} catch (err) {
-    console.error("Error", err);
-}
+  // Create IOTA instance directly with provider
+  const { getNodeInfo } = composeAPI({ provider });
 
-// Call getNodeInfo to get some information about the node
-console.log("Calling getNodeInfo");
-iota.api.getNodeInfo(function(error, success) {
-  if (error) {
-    console.error("Error", error);
-  } else {
-    console.log("Success", success);
+  try {
+    // Call getNodeInfo to get some information about the node
+    logOutput("Calling getNodeInfo");
+    const nodeInfo = await getNodeInfo();
+    logOutput("Success");
+    logOutput(JSON.stringify(nodeInfo, undefined, "\t"));
+  } catch (err) {
+    logError("Failed calling getNodeInfo", err);
   }
-});
+  logOutput("Finished.");
+})();
+
