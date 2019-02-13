@@ -16,7 +16,6 @@
     "keywords": [
         "iota",
         "tangle",
-        "curl",
-        "proof-of-work"
+        "iota.js"
     ]
 }
